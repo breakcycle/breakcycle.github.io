@@ -275,6 +275,14 @@ for the JavaScript code in this tag.
 <li>如果梯子网站上有clash支持 
 <ul class="org-ul">
 <li>执行 <code>wget -O config.yaml https://..</code> 从对应梯子网站上下载配置。</li>
+<li>打开配置文件在开头加上 <code>port: 7890
+socks-port: 7891
+allow-lan: true
+mode: Rule
+log-level: info
+external-controller: :9090
+ </code>
+ </li>
 </ul></li>
 <li>如果网站没有clash支持
 <ul class="org-ul">
