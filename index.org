@@ -1,0 +1,9 @@
+
+#+SETUPFILE: c:/Documents/blog/tpl/site-tpl.org
+#+TITLE:wwww
+#+OPTIONS: toc:nil
+#+OPTIONS: num:nil
+* Wiki
+  1. [[file:wiki/clash%20for%20Linux.org][Linux上的clash配置]]
+  2. [[file:wiki/how%20to%20use%20org-mode.org][org-mode简易入门]]
+  3. [[file:wiki/TVM%20install%20in%20Windows.org][Windows环境下安装TVM]]
