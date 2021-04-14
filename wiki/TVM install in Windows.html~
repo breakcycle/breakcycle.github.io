@@ -1,14 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh" xml:lang="zh">
 <head>
-<!-- 2021-04-14 周三 02:09 -->
+<!-- 2021-04-14 周三 02:25 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>org-mode 简单入门</title>
+<title>Windows环境下安装TVM</title>
 <meta name="generator" content="Org mode" />
 <meta name="author" content="Frank" />
+<meta name="description" content="Keep It Simple, Stupid"
+ />
 <style type="text/css">
  <!--/*--><![CDATA[/*><!--*/
   .title  { text-align: center;
@@ -180,6 +182,7 @@
   .org-svg { width: 90%; }
   /*]]>*/-->
 </style>
+<link rel="stylesheet" type="text/css" href="/static/site.css"/>
 <script type="text/javascript">
 /*
 @licstart  The following is the entire license notice for the
@@ -228,306 +231,72 @@ for the JavaScript code in this tag.
 </script>
 </head>
 <body>
-<div id="org-div-home-and-up">
- <a accesskey="h" href=""> UP </a>
- |
- <a accesskey="H" href="index.html"> HOME </a>
-</div><div id="content">
-<h1 class="title">org-mode 简单入门</h1>
+<div id="content">
+<h1 class="title">Windows环境下安装TVM</h1>
 <div id="table-of-contents">
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#orgaf3c8fa">emacs 配置</a></li>
-<li><a href="#orgbf251b8">学习笔记</a>
-<ul>
-<li><a href="#org49d181f">标题</a></li>
-<li><a href="#org51bb5f7">列表</a></li>
-<li><a href="#orge1da292"><span class="todo TODO">TODO</span> TODO清单样例 <code>[4/4]</code></a>
-<ul>
-<li><a href="#org9e4ddb2"><span class="done DONE">DONE</span> call people <code>[3/3]</code></a>
-<ul>
-<li><a href="#orgcea6414"><span class="done DONE">DONE</span> Peter</a></li>
-<li><a href="#org0408291"><span class="done DONE">DONE</span> Sarah</a></li>
-<li><a href="#orga53faa2"><span class="done DONE">DONE</span> Sam</a></li>
-</ul>
-</li>
-<li><a href="#org10270fb"><span class="done DONE">DONE</span> order food</a></li>
-<li><a href="#org78427fb"><span class="done DONE">DONE</span> think about sth</a></li>
-<li><a href="#org398990e"><span class="done DONE">DONE</span> talk to the nb</a></li>
-</ul>
-</li>
-<li><a href="#org2d9bb0e">脚注</a></li>
-<li><a href="#org8593c2c">表格</a></li>
-<li><a href="#orgacd372a">链接</a></li>
-<li><a href="#orgbc8ea66">标签</a></li>
-<li><a href="#org407196a">时间</a>
-<ul>
-<li><a href="#orgbe919a8"><span class="todo TODO">TODO</span> </a></li>
-</ul>
-</li>
-<li><a href="#orge398f88">特殊文本格式</a></li>
-</ul>
-</li>
+<li><a href="#org0b1d433">编译环境</a></li>
+<li><a href="#org563e80f">LLVM安装</a></li>
+<li><a href="#orgb6ae152">TVM安装</a></li>
+<li><a href="#org64ac850">参考资料</a></li>
 </ul>
 </div>
 </div>
-
-<div id="outline-container-orgaf3c8fa" class="outline-2">
-<h2 id="orgaf3c8fa">emacs 配置</h2>
-<div class="outline-text-2" id="text-orgaf3c8fa">
+<div id="outline-container-org0b1d433" class="outline-2">
+<h2 id="org0b1d433">编译环境</h2>
+<div class="outline-text-2" id="text-org0b1d433">
 <p>
-emacs的<a href="http://ftp.gnu.org/gnu/emacs/">安装</a>教程很多，不再赘述，说一下配置文件.emacs的生成方法。
-</p>
-
-<p>
-用鼠标点击Options菜单，随便点击一两个选项，然后点击Save Options。这样做的目的是让emacs自己主动创建.emacs.d文件夹以及.emacs文件！观察你的Emacs窗体最后一行，是否显示“Wrote d:/Emacs22.2/.emacs”？
-</p>
-</div>
-</div>
-<div id="outline-container-orgbf251b8" class="outline-2">
-<h2 id="orgbf251b8">学习笔记</h2>
-<div class="outline-text-2" id="text-orgbf251b8">
-</div>
-<div id="outline-container-org49d181f" class="outline-3">
-<h3 id="org49d181f">标题</h3>
-<div class="outline-text-3" id="text-org49d181f">
-<ul class="org-ul">
-<li>#+STARTUP:indent 简洁模式</li>
-
-<li>Tab 展开折叠</li>
-
-<li>M+left/right 升降级标题</li>
-</ul>
-</div>
-</div>
-
-<div id="outline-container-org51bb5f7" class="outline-3">
-<h3 id="org51bb5f7">列表</h3>
-<div class="outline-text-3" id="text-org51bb5f7">
-<p>
-无序列表如下：
-</p>
-
-<ul class="org-ul">
-<li>treeroot
-<ul class="org-ul">
-<li>brachk1</li>
-<li>brach2</li>
-</ul></li>
-</ul>
-
-<p>
-有序列表如下：
-</p>
-
-<ol class="org-ol">
-<li class="trans"><code>[-]</code> task1 <code>[50%]</code>
-<ol class="org-ol">
-<li class="off"><code>[&#xa0;]</code> subtask1</li>
-<li class="on"><code>[X]</code> subtask2</li>
-</ol></li>
-<li class="off"><code>[&#xa0;]</code> task2</li>
-</ol>
-
-<p>
-提示(同级下不能同时用序号和-,需要解决)
-</p>
-
-<ul class="org-ul">
-<li>M+RET(Enter)自动输入同级条目 按M+left/right调整层</li>
-<li>C-c C-c 改变CheckBox状态，即task后的[]，可添加%、/两种符号，自动更新</li>
-<li>C-c C-* 改变[]成DONE/TODO样式 C-c C-t在DONE和TODO切换</li>
-<li>C-c 设置优先级(ABC)</li>
-</ul>
-</div>
-</div>
-
-<div id="outline-container-orge1da292" class="outline-3">
-<h3 id="orge1da292"><span class="todo TODO">TODO</span> TODO清单样例 <code>[4/4]</code></h3>
-<div class="outline-text-3" id="text-orge1da292">
-</div>
-<div id="outline-container-org9e4ddb2" class="outline-4">
-<h4 id="org9e4ddb2"><span class="done DONE">DONE</span> call people <code>[3/3]</code></h4>
-<div class="outline-text-4" id="text-org9e4ddb2">
-</div>
-<div id="outline-container-orgcea6414" class="outline-5">
-<h5 id="orgcea6414"><span class="done DONE">DONE</span> Peter</h5>
-</div>
-<div id="outline-container-org0408291" class="outline-5">
-<h5 id="org0408291"><span class="done DONE">DONE</span> Sarah</h5>
-</div>
-<div id="outline-container-orga53faa2" class="outline-5">
-<h5 id="orga53faa2"><span class="done DONE">DONE</span> Sam</h5>
-</div>
-</div>
-<div id="outline-container-org10270fb" class="outline-4">
-<h4 id="org10270fb"><span class="done DONE">DONE</span> order food</h4>
-</div>
-<div id="outline-container-org78427fb" class="outline-4">
-<h4 id="org78427fb"><span class="done DONE">DONE</span> think about sth</h4>
-</div>
-<div id="outline-container-org398990e" class="outline-4">
-<h4 id="org398990e"><span class="done DONE">DONE</span> talk to the nb</h4>
-</div>
-</div>
-
-<div id="outline-container-org2d9bb0e" class="outline-3">
-<h3 id="org2d9bb0e">脚注</h3>
-<div class="outline-text-3" id="text-org2d9bb0e">
-<p>
-用[fn: n]的方式插入<sup><a id="fnr.1" class="footref" href="#fn.1">1</a></sup>
-</p>
-</div>
-</div>
-
-<div id="outline-container-org8593c2c" class="outline-3">
-<h3 id="org8593c2c">表格</h3>
-<div class="outline-text-3" id="text-org8593c2c">
-<p>
-输入表头后在第二行添加|-后按tab表格会自动生成,最后一行按tab自动添加下一行：
+Visual Studio 2015 update 3以上版本、MinGW-gcc和Cmake。源码包llvm clang compiler-rt tvm。其中gcc和llvm两者版本要匹配，否则编译会出错。
 </p>
 <ul class="org-ul">
-<li>C-c | 通过输入大小的方式插入表格</li>
-<li>tab 跳到右一表格 加S 反方向跳</li>
-<li>enter 跳到下方表格</li>
-<li>M-方向键 移动</li>
-<li>M-S-方向键 插入/删除行(列)</li>
+<li>我的软件环境 ：</li>
+<li>Visual Studio 2019</li>
+<li>gcc-8.1</li>
+<li>Python 3.8</li>
+<li>CMAKE</li>
+<li>git</li>
+<li>llvm 11.0</li>
+<li>tvm 0.8</li>
 </ul>
-<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
-
-
-<colgroup>
-<col  class="org-left" />
-
-<col  class="org-right" />
-
-<col  class="org-right" />
-
-<col  class="org-right" />
-
-<col  class="org-right" />
-</colgroup>
-<thead>
-<tr>
-<th scope="col" class="org-left">name</th>
-<th scope="col" class="org-right">phone</th>
-<th scope="col" class="org-right">sub1</th>
-<th scope="col" class="org-right">sub2</th>
-<th scope="col" class="org-right">total</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="org-left">wang</td>
-<td class="org-right">1785411</td>
-<td class="org-right">12</td>
-<td class="org-right">21</td>
-<td class="org-right">0.57142857</td>
-</tr>
-
-<tr>
-<td class="org-left">frank</td>
-<td class="org-right">54658</td>
-<td class="org-right">11</td>
-<td class="org-right">11</td>
-<td class="org-right">1</td>
-</tr>
-
-<tr>
-<td class="org-left">zarker</td>
-<td class="org-right">654</td>
-<td class="org-right">22</td>
-<td class="org-right">22</td>
-<td class="org-right">1</td>
-</tr>
-</tbody>
-</table>
-
+</div>
+</div>
+<div id="outline-container-org563e80f" class="outline-2">
+<h2 id="org563e80f">LLVM安装</h2>
+<div class="outline-text-2" id="text-org563e80f">
 <p>
-<code>#+TBLFM: $5=$3/$4</code>
+    从LLVM官网下载解压llvm、clang和compiler-rt，compiler-rt放到projects文件夹，clang放到tools中。
+创建并进入build 文件夹，运行 <code>cmake -G "Visual Studio 16 2019" .. -Thost=x64</code> 
+在生成的文件中找到llvm.sln，双击打开。
+选择Release x64，在右侧资源管理器右键单击解决方案，生成。
+配置环境变量PATH为 <code>llvm/build/Release/bin</code> 。
 </p>
 </div>
 </div>
-
-<div id="outline-container-orgacd372a" class="outline-3">
-<h3 id="orgacd372a">链接</h3>
-<div class="outline-text-3" id="text-orgacd372a">
-<p>
-用于链接资源，格式：
-</p>
-<pre class="example">
-- [[链接地址][名称]]
-- [[http://][xxx]]
-- [[file:.../][xx]]
-</pre>
-<p>
-显示原有格式用：
-</p>
-<pre class="example">
-- #+BEGIN_SRC
-- #+END_SRC
-</pre>
-<p>
-若资源为图片时，不写名称，则直接显示图片
-<img src="file:///E:/Users/frank/Desktop/illust_64495434_20200518_152634.jpg" alt="illust_64495434_20200518_152634.jpg" />
-</p>
-</div>
-</div>
-
-<div id="outline-container-orgbc8ea66" class="outline-3">
-<h3 id="orgbc8ea66">标签</h3>
-<div class="outline-text-3" id="text-orgbc8ea66">
+<div id="outline-container-orgb6ae152" class="outline-2">
+<h2 id="orgb6ae152">TVM安装</h2>
+<div class="outline-text-2" id="text-orgb6ae152">
 <ul class="org-ul">
-<li>C-c C-q 给每一章节添加标签</li>
-<li>C-c \ 生成带标签的树</li>
+<li>从tvm官网下载解压，修改CmakeLists.txt文件，选择需要打开的选项，其中llvm选项ON/OFF位置改为llvm-config路径，路径一般为 <code>"llvm/build/Release/bin/llvm-config"</code> ，使用cmake运行 <code>cmake -G "Visual Studio 16 2019" -DCMAKE_BUILD_TYPE=Release -DCMAKE_CONFIGURATION_TYPES=Release ..</code> 生成需要编译的文件，完成后打开tvm.sln，此部分和LLVM安装相同。编译完成后添加环境变量PYTHONPATH为 <code>"C:\Users\hasee\tvm\python;C:\Users\hasee\tvm\build\Release;%PYTHONPATH%;"</code> 。</li>
+<li>完成后根据tvm安装文档安装python包。</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org407196a" class="outline-3">
-<h3 id="org407196a">时间</h3>
-<div class="outline-text-3" id="text-org407196a">
+<div id="outline-container-org64ac850" class="outline-2">
+<h2 id="org64ac850">参考资料</h2>
+<div class="outline-text-2" id="text-org64ac850">
 <p>
-输入C-c . 插入日历
-</p>
-</div>
-<div id="outline-container-orgbe919a8" class="outline-4">
-<h4 id="orgbe919a8"><span class="todo TODO">TODO</span> </h4>
-<div class="outline-text-4" id="text-orgbe919a8">
-<p>
-DEADLINE:<span class="timestamp-wrapper"><span class="timestamp">&lt;2020-10-14 周三 12:12&gt;</span></span>
+<a href="https://blog.csdn.net/yunzaitian163/article/details/102629775">https://blog.csdn.net/yunzaitian163/article/details/102629775</a>
+<a href="https://zhuanlan.zhihu.com/p/58814825">https://zhuanlan.zhihu.com/p/58814825</a>
+<a href="https://www.jianshu.com/p/13437251a0ab">https://www.jianshu.com/p/13437251a0ab</a>
 </p>
 </div>
 </div>
 </div>
-<div id="outline-container-orge398f88" class="outline-3">
-<h3 id="orge398f88">特殊文本格式</h3>
-<div class="outline-text-3" id="text-orge398f88">
-<p>
-<b>加粗</b>
-<i>斜体</i>
-<span class="underline">下划线</span>
-<code>代码块</code>
-<code>ver</code>
-<del>划线</del>
-</p>
-</div>
-</div>
-</div>
-<div id="footnotes">
-<h2 class="footnotes">Footnotes: </h2>
-<div id="text-footnotes">
-
-<div class="footdef"><sup><a id="fn.1" class="footnum" href="#fnr.1">1</a></sup> <div class="footpara"><p class="footpara">
-<a href="https://orgmode.org/org.html">https://orgmode.org/org.html</a>
-</p></div></div>
-
-
-</div>
-</div></div>
 <div id="postamble" class="status">
 <p class="author">Author: Frank</p>
-<p class="date">Created: 2021-04-14 周三 02:09</p>
+<p class="date">Created: 2021-04-14 周三 02:25</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>

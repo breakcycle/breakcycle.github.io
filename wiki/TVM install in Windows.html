@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="zh" xml:lang="zh">
 <head>
-<!-- 2021-04-14 周三 02:25 -->
+<!-- 2021-04-15 周四 01:29 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Windows环境下安装TVM</title>
@@ -240,7 +240,6 @@ for the JavaScript code in this tag.
 <li><a href="#org0b1d433">编译环境</a></li>
 <li><a href="#org563e80f">LLVM安装</a></li>
 <li><a href="#orgb6ae152">TVM安装</a></li>
-<li><a href="#org64ac850">参考资料</a></li>
 </ul>
 </div>
 </div>
@@ -279,16 +278,18 @@ Visual Studio 2015 update 3以上版本、MinGW-gcc和Cmake。源码包llvm clan
 <div class="outline-text-2" id="text-orgb6ae152">
 <ul class="org-ul">
 <li>从tvm官网下载解压，修改CmakeLists.txt文件，选择需要打开的选项，其中llvm选项ON/OFF位置改为llvm-config路径，路径一般为 <code>"llvm/build/Release/bin/llvm-config"</code> ，使用cmake运行 <code>cmake -G "Visual Studio 16 2019" -DCMAKE_BUILD_TYPE=Release -DCMAKE_CONFIGURATION_TYPES=Release ..</code> 生成需要编译的文件，完成后打开tvm.sln，此部分和LLVM安装相同。编译完成后添加环境变量PYTHONPATH为 <code>"C:\Users\hasee\tvm\python;C:\Users\hasee\tvm\build\Release;%PYTHONPATH%;"</code> 。</li>
-<li>完成后根据tvm安装文档安装python包。</li>
+<li>完成后根据tvm安装文档安装python包。
+参考资料</li>
 </ul>
-</div>
-</div>
-<div id="outline-container-org64ac850" class="outline-2">
-<h2 id="org64ac850">参考资料</h2>
-<div class="outline-text-2" id="text-org64ac850">
 <p>
 <a href="https://blog.csdn.net/yunzaitian163/article/details/102629775">https://blog.csdn.net/yunzaitian163/article/details/102629775</a>
+</p>
+
+<p>
 <a href="https://zhuanlan.zhihu.com/p/58814825">https://zhuanlan.zhihu.com/p/58814825</a>
+</p>
+
+<p>
 <a href="https://www.jianshu.com/p/13437251a0ab">https://www.jianshu.com/p/13437251a0ab</a>
 </p>
 </div>
@@ -296,7 +297,7 @@ Visual Studio 2015 update 3以上版本、MinGW-gcc和Cmake。源码包llvm clan
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Frank</p>
-<p class="date">Created: 2021-04-14 周三 02:25</p>
+<p class="date">Created: 2021-04-15 周四 01:29</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
